@@ -1,7 +1,7 @@
 arxiv
 faiss-cpu
 langchain
-ray[data]
+ray[data]==2.5.1
 sentence-transformers
 tqdm
 torch
