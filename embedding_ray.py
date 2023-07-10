@@ -2,7 +2,7 @@ import io
 import pypdf
 import ray
 import langchain
-from langchain.vectorstores import Chroma
+from langchain.vectorstores import chroma
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.llms import HuggingFaceHub
