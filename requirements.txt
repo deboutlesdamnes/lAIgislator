@@ -1,9 +1,10 @@
 arxiv
 faiss-cpu
 langchain
-pypdf
-ray[data]==2.4.0
+ray[data]
 sentence-transformers
 tqdm
 torch
+chromadb
+llama-index
 transformers
