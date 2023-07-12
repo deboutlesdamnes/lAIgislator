@@ -8,3 +8,4 @@ torch
 chromadb
 llama-index
 transformers
+pydantic==1.10.10
