@@ -1,5 +1,6 @@
 from typing import Dict, List
 from pathlib import Path
+import langchain
 import llama_index
 from llama_index import download_loader
 from llama_index import Document
@@ -62,7 +63,7 @@ embedded_nodes = nodes.map_batches(
     EmbedNodes, 
     batch_size=100, 
     # Use 1 GPU per actor.
-    num_gpus=4,
+    num_gpus=1,
     # There are 4 GPUs in the cluster. Each actor uses 1 GPU. So we want 4 total actors.
     # Set the size of the ActorPool to the number of GPUs in the cluster.
     compute=ActorPoolStrategy(size=4),
