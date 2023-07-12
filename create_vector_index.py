@@ -62,10 +62,10 @@ embedded_nodes = nodes.map_batches(
     EmbedNodes, 
     batch_size=100, 
     # Use 1 GPU per actor.
-    num_gpus=1,
+    num_gpus=4,
     # There are 4 GPUs in the cluster. Each actor uses 1 GPU. So we want 4 total actors.
     # Set the size of the ActorPool to the number of GPUs in the cluster.
-    compute=ActorPoolStrategy(size=3),
+    compute=ActorPoolStrategy(size=4),
     )
 
 # Step 5: Trigger execution and collect all the embedded nodes.
