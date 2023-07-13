@@ -1,7 +1,7 @@
 from typing import Dict, List
 from pathlib import Path
-import langchain
-import llama_index
+import subprocess
+import chromadb
 from llama_index import download_loader
 from llama_index import Document
 
@@ -9,7 +9,19 @@ from llama_index import Document
 UnstructuredReader = download_loader("UnstructuredReader")
 loader = UnstructuredReader()
 
-print("Loaded readers...")
+def load_and_parse_files(file_row: Dict[str, Path]) -> Dict[str, Document]:
+    documents = []
+    file = file_row["path"]
+    if file.is_dir():
+        return []
+    # Skip all non-html files like png, jpg, etc.
+    if file.suffix.lower() == ".txt":
+        loaded_doc = loader.load_data(file=file, split_documents=False)
+        loaded_doc[0].extra_info = {"path": str(file)}
+        documents.extend(loaded_doc)
+    return [{"doc": doc} for doc in documents]
+
+
 # Step 2: Convert the loaded documents into llama_index Nodes. This will split the documents into chunks.
 from llama_index.node_parser import SimpleNodeParser
 from llama_index.data_structs import Node
@@ -51,11 +63,20 @@ import ray
 from ray.data import ActorPoolStrategy
 
 # First, download the Ray documentation locally
-ds = ray.data.read_text("s3://docs-public-bills/")
-print("Documents loaded...")
+# wget -e robots=off --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains docs.ray.io --no-parent https://docs.ray.io/en/master/
+
+
+# Get the paths for the locally downloaded documentation.
+subprocess.run(["aws", "s3", "sync", "s3://docs-public-bills", "./billtexts"])
+all_docs_gen = Path("./billtexts/").rglob("*")
+all_docs = [{"path": doc.resolve()} for doc in all_docs_gen]
+
+# Create the Ray Dataset pipeline
+ds = ray.data.from_items(all_docs)
+# Use `flat_map` since there is a 1:N relationship. Each filepath returns multiple documents.
+loaded_docs = ds.flat_map(load_and_parse_files)
 # Use `flat_map` since there is a 1:N relationship. Each document returns multiple nodes.
-nodes = ds.map_batches(convert_documents_into_nodes)
-print("Converted to nodes...")
+nodes = loaded_docs.flat_map(convert_documents_into_nodes)
 # Use `map_batches` to specify a batch size to maximize GPU utilization.
 # We define `EmbedNodes` as a class instead of a function so we only initialize the embedding model once. 
 #   This state can be reused for multiple batches.
@@ -66,19 +87,18 @@ embedded_nodes = nodes.map_batches(
     num_gpus=1,
     # There are 4 GPUs in the cluster. Each actor uses 1 GPU. So we want 4 total actors.
     # Set the size of the ActorPool to the number of GPUs in the cluster.
-    compute=ActorPoolStrategy(size=4),
+    compute=ActorPoolStrategy(size=4), 
     )
 
 # Step 5: Trigger execution and collect all the embedded nodes.
-h117_nodes = []
+ray_docs_nodes = []
 for row in embedded_nodes.iter_rows():
     node = row["embedded_nodes"]
     assert node.embedding is not None
-    h117_nodes.append(node)
-print("Nodes embedded...")
+    ray_docs_nodes.append(node)
 
 # Step 6: Store the embedded nodes in a local vector store, and persist to disk.
-print("Storing in vector index...")
-from llama_index import chromadb
-ray_docs_index = chromadb(nodes=h117_nodes)
-ray_docs_index.storage_context.persist(persist_dir="/tmp/ray_docs_index")
+print("Storing Ray Documentation embeddings in vector index.")
+from chromadb import Chroma
+ray_docs_index = Chroma(nodes=ray_docs_nodes)
+ray_docs_index.storage_context.persist(persist_dir="/tmp/billtext_index")
