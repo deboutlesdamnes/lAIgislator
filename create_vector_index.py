@@ -99,6 +99,13 @@ for row in embedded_nodes.iter_rows():
 
 # Step 6: Store the embedded nodes in a local vector store, and persist to disk.
 print("Storing Ray Documentation embeddings in vector index.")
+from llama_index import VectorStoreIndex
 from llama_index.vector_stores import ChromaVectorStore
-bills_index = ChromaVectorStore(nodes=ray_docs_nodes)
+from llama_index.storage.storage_context import StorageContext
+from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+chroma_client = chromadb.Client()
+chroma_collection = chroma_client.create_collection("quickstart")
+vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
+storage_context = StorageContext.from_defaults(vector_store=vector_store)
+bills_index = VectorStoreIndex.build_index_from_nodes(nodes=ray_docs_nodes, storage_context=storage_context)
 bills_index.storage_context.persist(persist_dir="/tmp/billtext_index")
