@@ -67,7 +67,7 @@ from ray.data import ActorPoolStrategy
 
 
 # Get the paths for the locally downloaded documentation.
-subprocess.run(["aws", "s3", "cp", "s3://docs-public-bills/BILLS-117hr1eh.txt", './billtexts/hr1eh.txt'])
+subprocess.run(["aws", "s3", "sync", "s3://docs-public-bills", "./billtexts"])
 #subprocess.run(["unrar", "e", "billtext.rar", "./billtexts"])
 all_docs_gen = Path("./billtexts/").rglob("*")
 all_docs = [{"path": doc.resolve()} for doc in all_docs_gen]
