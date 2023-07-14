@@ -1,7 +1,6 @@
 from typing import Dict, List
 from pathlib import Path
 import subprocess
-import chromadb
 from llama_index import download_loader
 from llama_index import Document
 
@@ -65,18 +64,17 @@ from ray.data import ActorPoolStrategy
 # First, download the Ray documentation locally
 # wget -e robots=off --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains docs.ray.io --no-parent https://docs.ray.io/en/master/
 
-
 # Get the paths for the locally downloaded documentation.
-subprocess.run(["aws", "s3", "sync", "s3://docs-public-bills", "./billtexts"])
-#subprocess.run(["unrar", "e", "billtext.rar", "./billtexts"])
 all_docs_gen = Path("./billtexts/").rglob("*")
 all_docs = [{"path": doc.resolve()} for doc in all_docs_gen]
 
 # Create the Ray Dataset pipeline
+print("loading database")
 ds = ray.data.from_items(all_docs)
 # Use `flat_map` since there is a 1:N relationship. Each filepath returns multiple documents.
+print("loading and parsing")
 loaded_docs = ds.flat_map(load_and_parse_files)
-# Use `flat_map` since there is a 1:N relationship. Each document returns multiple nodes.
+# Use `flat_map` since there is a a1:N relationship. Each document returns multiple nodes.
 nodes = loaded_docs.flat_map(convert_documents_into_nodes)
 # Use `map_batches` to specify a batch size to maximize GPU utilization.
 # We define `EmbedNodes` as a class instead of a function so we only initialize the embedding model once. 
@@ -92,6 +90,7 @@ embedded_nodes = nodes.map_batches(
     )
 
 # Step 5: Trigger execution and collect all the embedded nodes.
+print("converting to nodes")
 bills_nodes = []
 for row in embedded_nodes.iter_rows():
     node = row["embedded_nodes"]
