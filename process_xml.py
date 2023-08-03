@@ -37,8 +37,11 @@ def get_billtext(input_file, soup):
     if legis_body is not None:
         for entry in legis_body.find_all("toc-entry"):
             text = entry.get_text()
-            no_weirdspaces_text = re.sub("\u2002", " ", text)
-            entry.string.replaceWith(no_weirdspaces_text)
+            try:
+                no_weirdspaces_text = re.sub("\u2002", " ", text)
+                entry.string.replaceWith(no_weirdspaces_text)
+            except :
+                text = text
         for enum in legis_body.find_all("enum"):
             enum.insert_after(" ")
         for paragraph in legis_body.find_all("paragraph"):
