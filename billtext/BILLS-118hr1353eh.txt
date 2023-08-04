@@ -1,0 +1,95 @@
+
+1. Short title
+This Act may be cited as the Advanced, Local Emergency Response Telecommunications Parity Act or the ALERT Parity Act. 2. Emergency connectivity service
+ (a) Rulemaking required
+ 
+(1) In general
+Not later than 18 months after the date of the enactment of this Act, the Commission shall issue rules for the provision of emergency connectivity service under which—
+(A) a person may submit to the Commission an application for approval to provide such service to an area— (i) that is an unserved area with respect to either or both services described in subsection (i)(5)(B); or
+(ii) in the event that such area becomes an unserved area with respect to either or both such services due to destruction of infrastructure, a power outage, or any other reason; and (B) for any period during which such approval is in effect and such area is an unserved area, such person will receive access to electromagnetic spectrum in accordance with subsection (d) to provide emergency connectivity service to such area.
+
+(2) Provider not licensee
+The Commission shall include in the rules issued under paragraph (1) language to ensure that approval of an application to provide emergency connectivity service under such rules does not render the provider of such service a licensee (as such term is defined in section 3 of the Communications Act of 1934 (47 U.S.C. 153)). 
+(3) Deadline to initiate rulemaking
+The Commission shall initiate a rulemaking to issue the rules required by paragraph (1) not later than 180 days after the date of the enactment of this Act.
+(b) Demonstrations
+In the rules issued under subsection (a), the Commission shall require a person who submits an application to provide emergency connectivity service under such rules, in order for such application to be approved, to demonstrate to the Commission the following: 
+(1) Such person has a technical proposal describing how such person plans to provide such service and how the proposal complies with technical requirements included in such rules under subsection (d)(2).
+
+(2) Such person will not use any electromagnetic spectrum to which access is made available under such rules to provide any service other than emergency connectivity service, unless the other service is provided under a separate authorization to use such spectrum held by such person. 
+(3) Such service proposed can withstand the impact of major natural disasters, such as earthquakes, hurricanes, wildfires, floods, blizzards, and tornados.
+
+(4) Such person has the capability to begin providing such service in a rapid manner— (A) in the case of an application to provide such service to an area that is an unserved area at the time at which the application is submitted, after the approval of the application; or
+(B) in the case of an application to provide such service to an area in the event that such area becomes an unserved area due to destruction of infrastructure, a power outage, or any other reason, after such area becomes an unserved area. (c) Publication of list of providers
+The Commission shall publish on the internet website of the Commission a list of all providers of emergency connectivity service for which an approval is in effect to provide such service under the rules issued under subsection (a).
+(d) Access to electromagnetic spectrum
+The Commission shall include in the rules issued under subsection (a) the following: 
+(1) In the case of a provider of emergency connectivity service that is approved to provide such service to an area under such rules and that seeks access to spectrum that another entity is authorized to use, access to such spectrum shall be made available to such provider only if such provider receives voluntary express written consent for such access from such entity. An entity that receives a request for consent under this paragraph shall reasonably engage with the provider submitting the request and make a determination with respect to such request in a timely manner.
+
+(2) With respect to providers of emergency connectivity service that are approved to provide such service to an area under such rules, technical requirements applicable to such providers that ensure that the use of electromagnetic spectrum under a relevant approval does not cause harmful interference to the use of spectrum by another entity authorized to provide a service to such area or an adjacent geographic area. (e) Areas unserved with respect to both services
+In the case of an area that is an unserved area with respect to both services described in subsection (i)(5)(B), the rules issued under subsection (a) shall require that, if a provider approved to provide emergency connectivity service to such area under such rules chooses to provide emergency connectivity service to such area, such provider shall provide both services described in subsection (i)(5)(B) to such area.
+(f) Limitation of liability
+
+
+(1) Transmission of alert messages
+Section 602(e)(1) of the Warning, Alert, and Response Network Act (47 U.S.C. 1201(e)(1)) shall apply to a provider of emergency connectivity service (including its officers, directors, employees, vendors, and agents) with respect to the provision of such service (to the extent such service consists of the provision of the service described in subsection (i)(5)(B)(i) of this section) in accordance with the rules issued under subsection (a) of this section, as if such provider were a provider of commercial mobile service that transmits emergency alerts and meets its obligations under such Act. 
+(2) Provision of 9–1–1 service
+ (A) In general
+Section 4 of the Wireless Communications and Public Safety Act of 1999 (47 U.S.C. 615a) is amended—
+(i) in subsection (a)— (I) by inserting emergency connectivity service provider, after IP-enabled voice service provider,; and
+(II) by inserting emergency connectivity service, after emergency services,; (ii) in subsection (b)—
+(I) by striking IP-enabled voice service or and inserting IP-enabled voice service, emergency connectivity service, or; and (II) by inserting emergency connectivity service, after IP-enabled voice service,; and
+(iii) in subsection (c), by inserting emergency connectivity service, after IP-enabled voice service, each place it appears. (B) Definitions
+Section 7 of the Wireless Communications and Public Safety Act of 1999 (47 U.S.C. 615b) is amended by adding at the end the following:
+
+
+(11) Emergency connectivity service
+The term emergency connectivity service has the meaning given such term in paragraph (5) of section 2(i) of the Advanced, Local Emergency Response Telecommunications Parity Act, to the extent such service consists of the provision of the service described in subparagraph (B)(ii) of such paragraph. 
+(12) Emergency connectivity service provider
+The term emergency connectivity service provider means a person who provides emergency connectivity service in accordance with the rules issued under section 2(a) of the Advanced, Local Emergency Response Telecommunications Parity Act..
+(g) Report to Congress
+Not later than 1 year after the date on which the Commission issues rules under subsection (a), and annually thereafter, the Commission shall submit to the Committee on Energy and Commerce of the House of Representatives and the Committee on Commerce, Science, and Transportation of the Senate a report regarding the provision of emergency connectivity service under such rules, which shall include a description of— 
+(1) each instance during the preceding year that emergency connectivity service was provided under such rules; and
+
+(2) each instance during the preceding year that an entity authorized to use spectrum declined to provide, to a provider of emergency connectivity service, the consent described in subsection (d)(1). (h) Rules of construction
+Nothing in this section may be construed to—
+
+(1) provide the Commission with new authority to regulate the terms, conditions, or rates applicable to an agreement between 2 or more parties to facilitate the provision of emergency connectivity service; 
+(2) preclude the Commission, before it issues rules under subsection (a), from permitting the use of electromagnetic spectrum by a person that otherwise meets the requirements of this section; or
+
+(3) preclude the Commission from approving an application to provide emergency connectivity service under the rules issued under subsection (a) that proposes using spectrum in a manner that is inconsistent with the Table of Frequency Allocations. (i) Definitions
+In this section:
+
+(1) Alert message
+The term alert message has the meaning given such term in section 10.10 of title 47, Code of Federal Regulations (or any successor regulation). 
+(2) Commercial mobile service
+The term commercial mobile service has the meaning given such term in section 332(d) of the Communications Act of 1934 (47 U.S.C. 332(d)).
+
+(3) Commission
+The term Commission means the Federal Communications Commission. 
+(4) Covered device
+The term covered device means—
+(A) a mobile device; or (B) any other device that is capable of—
+(i) receiving alert messages; and (ii) providing emergency information to a public safety answering point (which may include enhanced 9–1–1 service).
+
+(5) Emergency connectivity service
+
+(A) In general
+The term emergency connectivity service means a service— (i) to which covered devices are capable of connecting—
+(I) without any technical capability specific to such service; and (II) regardless of whether commercial mobile service or any other service is initialized on the device; and
+(ii) that consists only of the provision of a service described in subparagraph (B) to an area that is an unserved area with respect to such service. (B) Services described
+The services described in this subparagraph are the following:
+(i) Transmitting alert messages to covered devices. (ii) Providing emergency information from a covered device to a public safety answering point (which may include enhanced 9–1–1 service).
+
+(6) Enhanced 9–1–1 service
+The term enhanced 9–1–1 service has the meaning given such term in section 7 of the Wireless Communications and Public Safety Act of 1999 (47 U.S.C. 615b). 
+(7) Mobile device
+The term mobile device has the meaning given such term in section 10.10 of title 47, Code of Federal Regulations (or any successor regulation).
+
+(8) Public safety answering point
+The term public safety answering point has the meaning given such term in section 7 of the Wireless Communications and Public Safety Act of 1999 (47 U.S.C. 615b). 
+(9) Table of frequency allocations
+The term table of frequency allocations means the United States table of frequency allocations contained in section 2.106 of title 47, Code of Federal Regulations (or any successor regulation).
+
+(10) Unserved area
+The term unserved area means, with respect to a service described in paragraph (5)(B), an area that, due to lack of infrastructure, destruction of infrastructure, a power outage, or any other reason, has no provider of commercial mobile service that is capable of providing such service. 

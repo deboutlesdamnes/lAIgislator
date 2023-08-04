@@ -1,0 +1,85 @@
+
+1. Short title
+This Act may be cited as the Protecting Speech from Government Interference Act. 2. Prohibition on Federal employee censorship
+ (a) In general
+Chapter 73 of title 5, United States Code, is amended by adding at the end the following:
+
+VIII Prohibition on Federal employee censorship
+
+7381. Policy regarding Federal employee censorship
+It is the policy of the Congress that employees acting in their official capacity should neither take action within their authority or influence to promote the censorship of any lawful speech, nor advocate that a third party, including a private entity, censor such speech. 7382. Prohibition on Federal employee censorship
+ (a) In general
+An employee may not—
+
+(1) use the employee's official authority to censor any private entity, including outside of normal duty hours and while such employee is away from the employee’s normal duty post; or 
+(2) engage in censorship of a private entity—
+(A) while the employee is on duty; (B) in any room or building occupied in the discharge of official duties by an individual employed or holding office in the Government of the United States or any agency or instrumentality thereof;
+(C) while wearing a uniform or official insignia identifying the office or position of the employee; (D) while using any vehicle owned or leased by the Government of the United States or any agency or instrumentality thereof; or
+(E)  while using any information system or information technology (as defined under section 11101 of title 40). (b) Exceptions for law enforcement functions and reporting requirements
+ 
+(1) In general
+Nothing in this section shall be construed to prohibit an employee from engaging in lawful actions against unlawful speech within the official authority of such employee for the purpose of exercising legitimate law enforcement functions.
+
+(2) Reporting
+
+(A) In general
+Not later than 72 hours before an employee exercises a legitimate law enforcement function under paragraph (1) to take any action to censor any unlawful speech (in this paragraph referred to as a censorship action), and consistent with subparagraph (D), the head of the agency that employs the employee shall submit, to the Office of Special Counsel and the chair and ranking member of the committees of Congress described under subparagraph (B), a report that includes— (i) an overview of the action, or actions, to be taken, including a summary of the action being taken and the rationale for why a censorship action is necessary;
+(ii) the name of the entity which the action is being requested of; (iii) the person and entity targeted by the censorship action, including the associated name or number of any account used or maintained by the entity and a description of the specific speech content targeted;
+(iv) the agency’s legal authority for exercising the law enforcement function; (v) the agency employee or employees involved in the censorship action, including their position and any direct supervisor; 
+(vi) a list of other agencies that have been involved, consulted, or communicated with in coordination with the censorship action; and (vii) a classified annex, if the agency head deems it appropriate.
+(B) Committees
+The committees of Congress described under this subparagraph are the following: (i) The Committee on Oversight and Accountability, the Committee on the Judiciary, the Permanent Select Committee on Intelligence, and the Committee on Energy and Commerce of the House of Representatives.
+(ii) The Committee on Homeland Security and Governmental Affairs, the Committee on the Judiciary, Select Committee on Intelligence, and the Committee on Commerce, Science, and Transportation of the Senate. (C) Clarification of Office of Special Counsel reporting requirements
+The reporting requirements in this paragraph do not apply to the Office of Special Counsel’s advisory and enforcement functions under subchapter II of chapter 12. 
+(D) Reporting requirements for certain actions
+
+(i) Any censorship action relating to combating child pornography and exploitation, human trafficking, or the illegal transporting of or transacting in controlled substances shall be exempt from the reporting requirement under this paragraph. (ii) With respect to any censorship action related to safeguarding, or preventing the unlawful dissemination of, properly classified national security information, subparagraph (A) shall be applied by substituting Not later than 72 hours after for Not later than 72 hours before. 
+(c) Penalties
+
+
+(1) In general
+An employee who violates this section shall be subject to— (A) disciplinary action consisting of removal, reduction in grade, debarment from Federal employment for a period not to exceed 10 years, suspension, or reprimand;
+(B) an assessment of a civil penalty not to exceed $1,000; or (C) any combination of the penalties described in subparagraph (A) or (B).
+
+(2) Application to senior Government officials
+Paragraph (1)(B) shall be applied by substituting $50,000 for $1,000 for any employee who is— (A) paid from an appropriation for the White House Office; or
+(B) appointed by the President, by and with the advice and consent of the Senate. (d) Enforcement
+ 
+(1) In general
+Except as provided in paragraph (2) and subsection (c)(2), this section shall be enforced in the same manner as subchapter III of this chapter.
+
+(2) Application
+Notwithstanding any other provision of law, including section 1215(b), the Special Counsel may, in lieu of sending a report to the President under section 1215(b), seek civil monetary penalties under subsection (c)(2) pursuant to section 1215(a). This paragraph shall not be construed to limit or otherwise affect the President's authority to enforce any disciplinary action against an employee described under subsection (c)(2).  (e) Report
+ 
+(1) In general
+Not later than 240 days after the date of the enactment of this section, and annually thereafter, the Attorney General, in consultation with the Assistant Attorney General for Civil Rights and the Office of Special Counsel, shall submit to the committees of Congress described in subsection (b)(2)(B) a report evaluating the compliance by the Federal Government with this section, including a description of any action by the head of an agency or department in the executive branch to—
+(A) consult with any third parties about censorship by employees in the executive branch; or (B) engage in any activity prohibited under this section.
+
+(2) Sunset
+This subsection shall terminate on the date that is 10 years after the date of the enactment of this subsection.  (f) Annual training
+Not less than annually, the head of each employing agency shall provide mandatory training on this section and the requirements of this section to each agency employee.
+(g) Definitions
+In this subchapter— 
+(1) the term censor or censorship means influencing or coercing, or directing another to influence or coerce, for—
+(A) the removal or suppression of lawful speech, in whole or in part, from or on any interactive computer service; (B) the addition of any disclaimer, information, or other alert to lawful speech being expressed on an interactive computer service; or
+(C) the removal or restriction of access of any person or entity on an interactive computer service generally available to the public, unless such person or entity is engaged in unlawful speech or criminal activities on such service;  
+(2) the term employee has the meaning given that term in section 7322; 
+
+(3) the term interactive computer service has the meaning given that term in section 230(f) of the Communications Act of 1934 (47 U.S.C. 230(f)); 
+(4) the term lawful speech means speech protected by the First Amendment of the Constitution; and 
+
+(5) the term unlawful speech means speech not protected by the First Amendment of the Constitution. . (b) Clerical amendment
+The table of sections for chapter 73 of title 5, United States Code, is amended by adding at the end the following:
+
+
+Subchapter VIII—Prohibition on Federal employee censorship
+7381. Policy regarding Federal employee censorship.
+7382. Prohibition on Federal employee censorship..
+(c) Including censorship activities under jurisdiction of Office of Special Counsel
+Strike paragraph (1) of section 1216(a) of title 5, United States Code, and insert the following:  
+(1) political activity and censorship prohibited under subchapter III and subchapter VIII of chapter 73, relating to political and censorship activities, respectively, by Federal employees;.
+(d) Rule of construction
+Nothing in this Act or any amendment made by this Act should be interpreted as prohibiting a lawful action by a Federal agency to enforce a Federal law or regulation (including any action to enforce a Federal law or regulation addressing obscene matters), to establish or enforce the terms and conditions of Federal financial assistance, or to prohibit a Federal employee from using an official Federal account on an interactive computer service to communicate an official policy position, and relevant information, to the public, or provide information through normal press and public affairs relations. (e) Severability
+If any provision of this Act or any amendment made by this Act, or the application of a provision of this Act or an amendment made by this Act to any person or circumstance, is held to be unconstitutional, the remainder of this Act, and the application of the provisions to any person or circumstance, shall not be affected by the holding.
+3. Congressional findings
+The Congress finds that inspectors general should not less than annually for the next seven years publicly report the number of complaints and tips received, the number of investigations opened, and statistics on how investigations were managed and their disposition by that inspector general related to compliance with this Act and the amendments made by this Act.  

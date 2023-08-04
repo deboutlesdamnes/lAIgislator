@@ -1,0 +1,148 @@
+1. Short title; table of contents
+(a) Short title
+This Act may be cited as the FAA Research and Development Act of 2023. (b) Table of contents
+The table of contents for this Act is as follows:Sec. 1. Short title; table of contents.Sec. 2. Definitions.Sec. 3. Authorization of appropriations.Title I —FAA Research and Development OrganizationSec. 101. Report on implementation; funding for safety research and development.Title II —FAA Research and Development ActivitiesSec. 201. Aviation fuel research, development, and usage.Sec. 202. Continuous lower energy, emission, and noise (CLEEN).Sec. 203. Strategy on hydrogen aviation research and development.Sec. 204. Report on future electric grid resiliency.Sec. 205. Air traffic surveillance over oceans and other remote locations.Sec. 206. Utilization of space-based assets to improve air traffic control and aviation safety.Sec. 207. Aviation weather technology review.Sec. 208. Air traffic surface operations safety.Sec. 209. Airport and airfield pavement technology research program.Sec. 210. Technology review of artificial intelligence and machine learning technologies.Sec. 211. Research plan for commercial supersonic research.Sec. 212. Electromagnetic spectrum research and development.Sec. 213. Aviation structures, materials, and advanced manufacturing research and development.Sec. 214. Research plan on the remote tower program.Sec. 215. Air traffic control training.Sec. 216. Report on aviation cybersecurity directives.Sec. 217. Rule of construction regarding collaborations.Sec. 218. Turbulence research and development.Sec. 219. Research, development, and demonstration programs.Sec. 220. Limitation.2. Definitions
+In this Act:
+(1) Administrator
+The term Administrator means the Administrator of the Federal Aviation Administration.
+(2) Appropriate committees of Congress
+The term appropriate committees of Congress means the Committee on Science, Space, and Technology of the House of Representatives and the Committee on Commerce, Science, and Transportation of the Senate.
+(3) FAA
+The term FAA means the Federal Aviation Administration.
+(4) NASA
+The term NASA means the National Aeronautics and Space Administration.
+(5) Secretary
+The term Secretary means the Secretary of Transportation.3. Authorization of appropriations
+Subsection (a) of section 48102 of title 49, United States Code, is amended—
+(1) in paragraph (14), by striking and;
+(2) in paragraph (15) by striking the period at the end and inserting a semicolon; and
+(3) by adding at the end the following new paragraphs:
+(16) $255,130,000; for fiscal year 2024;
+(17) $261,000,000 for fiscal year 2025;
+(18) $267,000,000 for fiscal year 2026;
+(19) $273,000,000 for fiscal year 2027; and
+(20) $279,000,000 for fiscal year 2028..I  FAA Research and Development Organization
+101. Report on implementation; funding for safety research and development
+Not later than one year after the date of the enactment of this Act, the Comptroller General of the United States shall submit to the appropriate committees of Congress a report on the allocation of funding pursuant to section 48102 of title 49, United States Code, to the Secretary of Transportation to conduct civil aviation research and development and to assess the implementation of section 48102(b)(2) of such title.II  FAA Research and Development Activities
+201. Aviation fuel research, development, and usage
+(a) Roadmap
+Not later than nine months after the date of the enactment of this Act, the Secretary of Transportation shall coordinate with the Administrator of NASA, the Secretary of Energy, and the Administrator of the Environmental Protection Agency, and consult relevant stakeholders, including those in industry and academia, to prepare and submit to the appropriate committees of Congress a coordinated research and development roadmap to safely eliminate the use of leaded aviation fuel in existing and future certified piston-engine aircraft. Such roadmap shall—
+(1) identify activities to accelerate the development, testing, and certification of safe and lead-free fuel for use in general aviation aircraft, including requisite airport refueling infrastructure; and
+(2) consider the feasibility of widespread use of such safe and lead-free aviation fuel by not later than 2028.(b) Partnership with private industry
+The Administrator shall coordinate with industry and pilot operators regarding research programs for mass production and distribution of unleaded aviation gasoline for market viability engine safety, and define criteria to explore incentive programs to reduce lead emissions for communities in need.202. Continuous lower energy, emission, and noise (CLEEN)
+The Administrator shall consider expanding the CLEEN program under section 47511 of title 49, United States Code, and broadening eligibility for the CLEEN program to new entrants to the aviation system.203. Strategy on hydrogen aviation research and development
+(a) In general
+The Administrator, in consultation with the Administrator of NASA and the heads of other relevant Federal agencies, shall lead the development of a research and development strategy on the safe use of hydrogen as part of a sustainable future for aviation. Such strategy shall consider the following:
+(1) The feasibility, opportunities, challenges, and pathways toward the potential and safe uses of hydrogen in aviation.
+(2) The use of hydrogen in addition to research and development efforts, including electrification, operational efficiencies and other alternatives to traditional aviation fuel.(b) Transmittal
+Not later than one year after the date of the enactment of the Act, the Administrator shall transmit to the appropriate committees of Congress the research and development strategy required under subsection (a).(c) Research and development
+Based on the results of the research and development strategy under subsection (a), the Administrator, in coordination with the Administrator of NASA, may conduct research and development activities into the following:
+(1) The qualification of hydrogen aviation fuel.
+(2) The safe transition to such fuel for aircraft.
+(3) The advancement of certification efforts for such fuel.
+(4) Risk mitigation measures for the use of such fuel in aircraft systems, including propulsion and storage systems. 204. Report on future electric grid resiliency
+Not later than two years after the date of the enactment of this Act, the Administrator, in coordination with the Secretary of Energy, shall submit to the appropriate committees of Congress a report on the model use of the electrical grid to support future electric advanced air mobility, including cost, challenges, and opportunities for clean generation of electricity relating to such support.205. Air traffic surveillance over oceans and other remote locations
+(a) Air traffic surveillance over oceans
+Subject to the availability of appropriations for such purpose, the Administrator, in consultation with the Administrator of NASA and the heads of other relevant Federal agencies, shall carry out research, development, demonstration, and testing on civilian air traffic surveillance over oceans and other remote locations.(b) Requirements
+In carrying out the research, development, demonstration, and testing under subsection (a), the Administrator shall—
+(1) consider the need for international interoperability of technologies, data, operations, and air traffic control systems;
+(2) examine the status of using air traffic surveillance technologies, including space-based Automatic Dependent Surveillance-Broadcast, to facilitate the implementation of minimal separation standards over United States-controlled oceanic airspace;
+(3) identify mitigating approaches to reducing any operational challenges, associated costs, or workload impacts; and
+(4) use testing, data collection, evaluation, and analysis on the use of air traffic surveillance technologies, including space-based Automatic Dependent Surveillance-Broadcast, to support the activities described in paragraphs (1) through (3).(c) Pilot program
+The Administrator may carry out a pilot program to test and evaluate air traffic surveillance equipment over United States-controlled oceanic airspace and other remote locations.(d) Report
+Not later than one year after the date of the enactment of this Act, the Administrator shall submit to the appropriate committees of Congress a report on the activities carried out under this section.206. Utilization of space-based assets to improve air traffic control and aviation safety
+(a) In general
+Subject to the availability of appropriations for such purpose, the Administrator, in coordination with the Administrator of NASA, and in consultation with industry stakeholders, shall carry out research, development, and testing of the use of air traffic Space-Based Automatic Dependent Surveillance-Broadcast (ADS-B) data. (b) Research activities
+In carrying out the research, development, and testing under subsection (a) the Administrator shall focus on the following:
+(1) Monitoring and automatically reporting air turbulence events.
+(2) Providing space-based multilateration surveillance.
+(3) Identifying global positioning system (GPS) and global navigation satellite system (GNSS) disruptions affecting air traffic services and assessing the impact of such events on the safety of air traffic and the National Airspace System.
+(4) Evaluating the feasibility of implementing and using aviation safety technologies and systems using space-based Automatic Dependent Surveillance-Broadcast data.(c) Report
+Not later than 180 days after the date of the enactment of this Act, the Administrator shall provide to the appropriate committees of Congress a report on the research and development under subsection (a) and the activities researched pursuant to subsection (b).207. Aviation weather technology review
+(a) Review
+The Administrator, in consultation with the Administrator of the National Oceanic and Atmospheric Administration, shall conduct a review of current and planned research, modeling, and technology capabilities that have the potential to more accurately detect and predict weather impacts to aviation, including for unmanned aircraft systems and advanced air mobility operations, inform how advanced predictive models can enhance aviation operations, and increase national airspace system safety and efficiency.(b) Report
+Not later than one year after the date of the enactment of this Act, the Administrator shall submit to the appropriate committees of Congress a report containing the results of the review conducted under subsection (a).208. Air traffic surface operations safety
+(a) Research
+Subject to the availability of appropriations for such purpose, the Administrator, in consultation with the Administrator of NASA and the heads of other appropriate Federal agencies, shall continue to carry out research on technologies and operations to enhance air traffic surface operations safety.(b) Requirements
+The research program under subsection (a) shall examine the following:
+(1) The safety of current air traffic control operations related to air traffic surface operations.
+(2) Emerging in-cockpit technologies to enhance ground situational awareness.
+(3) Emerging technologies to enhance air traffic control situational awareness.
+(4) Air traffic surface operations safety for diverse advanced air mobility operations.
+(5) Safety and operational data needed to inform current and future safety programs on advanced air mobility vehicles.
+(6)  Economic benefits of utilizing existing airport infrastructure for use in advanced air mobility operations. (c) Report
+Not later than 18 months after the date of the enactment of this Act, the Administrator shall submit to the appropriate committees of Congress a report on the research carried out under this section, including regarding the transition into operational use of such research.209. Airport and airfield pavement technology research program
+Section 744 of the FAA Reauthorization Act of 2018 (Public Law 115–254; 49 U.S.C. 44505 note) is amended—
+(1) in paragraph (3), by striking and;
+(2) in paragraph (4), by striking durable airfield pavements. and inserting resilient and sustainable airfield and vertiport pavements; and; and 
+(3) by adding at the end the following new paragraph:
+(5) develop sustainability and resiliency guidelines to improve long-term pavement performance and reduce carbon emissions..210. Technology review of artificial intelligence and machine learning technologies
+(a) Review
+The Administrator shall conduct a review of current and planned artificial intelligence and machine learning technologies to improve airport efficiency and safety.(b) Summaries
+The review conducted under subsection (a) shall include examination of the application of artificial intelligence and machine learning technologies to the following:
+(1) Jet bridges.
+(2) Airport service vehicles on airport movement areas.
+(3) Aircraft taxi.
+(4) Any other areas the Administrator determines necessary to help improve airport efficiency and safety.(c) Report
+Not later than one year after the date of the enactment of this Act, the Administrator shall submit to the appropriate committees of Congress a report containing the results of the review conducted under subsection (a). The report shall also include an examination of China’s domestic application of artificial intelligence and machine learning technologies identified under subsection (b).211. Research plan for commercial supersonic research
+Not later than one year after the date of the enactment of this Act, the Administrator, in consultation with the Administrator of NASA and industry, shall submit to the appropriate committees of Congress a comprehensive research plan to build on existing research and development activities and identify any further research and development needed to inform the development of Federal and international policies, regulations, standards, and recommended practices relating to the certification and safe and efficient operation of civil supersonic aircraft and supersonic overland flight.212. Electromagnetic spectrum research and development
+(a) In general
+The Administrator shall conduct research, engineering, and development related to the effective and efficient use and management of radio frequency spectrum in the civil aviation domain, including for aircraft, unmanned aircraft systems, and advanced air mobility. Such research, engineering, and development shall, at a minimum, address the following:
+(1) How reallocation or repurposing of radio frequency spectrum adjacent to spectrum allocated for communication, navigation, and surveillance may impact the safety of civil aviation.
+(2) The effectiveness of measures to identify risks, protect, and mitigate against spectrum interference in frequency bands used in civil and commercial aviation operations to ensure public safety.
+(3) The implications, including risks, of new or emerging technologies or other factors on the environment for radio frequency spectrum interference.
+(4) How various new or emerging technologies may enable improvements in the prevention of, mitigation of, or resilience to interference, including the ability to sense the spectrum environment and dynamically change frequency to ensure resilient operations.(b) Report
+Not later than one year after the date of the enactment of this Act, the Administrator shall submit to the appropriate committees of Congress a report containing the results of the research, engineering, and development conducted under subsection (a).213. Aviation structures, materials, and advanced manufacturing research and development
+(a) In general
+Using the amounts available under section 48102(a) of title 49, United States Code, the Administrator, in coordination with the Director of the National Institute of Standards and Technology, shall carry out a research and development program for advancing aviation structures, materials, and manufacturing for the safe use in and on aircraft.(b) Inclusion
+The program under subsection (a) shall, to the extent practicable, include research and development relating to the following:
+(1) Metallic and non-metallic based additive materials and processes, composites, and other advanced materials.
+(2) Process development for the development of design and manufacturing standards for aviation structures, materials, and additive manufacturing.
+(3) Improving certification efficiency of aviation structures, materials, and additively manufactured aviation products and components.
+(4) Evaluating long-term material and structural behavior and associated maintenance, including support for fatigue life determination, structural changes related to fatigue, thermal, corrosive environments, and expected maintenance of such materials, including recommended repair techniques.
+(5) Partnering with commercial entities to mature and certify, as appropriate, the following capabilities for use in aircraft manufacturing:(A) Additive manufacturing, including large-scale additive manufacturing.(B) Aviation structures.(C) Advanced materials capabilities, including the development and qualification of new material chemistries.
+(6) Inspection and quality assurance technologies for use with complex geometries enabled by advanced manufacturing methods.(c) Report
+Not later than 180 days after the date of the enactment of this Act, the Administrator shall provide to the appropriate committees of Congress a report on the findings of the research under subsection (a).214. Research plan on the remote tower program
+(a) In general
+Not later than 180 days after the date of the enactment of this Act, the Administrator shall submit to the appropriate committees of Congress a comprehensive plan for research, development, testing, and evaluation needed to mature remote tower technology and provide a strategic roadmap to support standards development, validation, and operational certification of such technology.(b) Considerations
+As part of the plan required under subsection (a), the Administrator should consider the use of remote tower technologies for advanced air mobility operations.215. Air traffic control training
+(a) Research
+Subject to the availability of appropriations for such purpose, the Administrator shall carry out a research program to evaluate opportunities to modernize, enhance, and streamline training time to become a Certified Professional Controller.(b) Requirements
+The research under subsection (a) shall—
+(1) assess the use of advanced technologies, such as artificial intelligence, machine learning, adaptive computer-based simulation, virtual reality, or augmented reality, to enhance controller knowledge retention, improve performance, and improve the effectiveness of training time;
+(2) develop a timeline to deploy proven advanced technologies and associated processes for accreditation in training programs and training facilities within the national airspace system; and
+(3) include collaboration with labor organizations and other stakeholders.(c) Report
+Not later than one year after the date of the enactment of this Act, the Administrator shall submit to the appropriate committees of Congress a report on the findings of the research under subsection (a).216. Report on aviation cybersecurity directives
+Not later than 180 days after the date of enactment of this Act, the Administrator shall submit to the appropriate committees of Congress a report on the status of the FAA’s implementation of section 2111 of the FAA Extension, Safety, and Security Act of 2016 (Public Law 114–190; 49 U.S.C. 44903 note; relating to the development of a comprehensive and strategic aviation cybersecurity framework and establishment of a research and development plan to mitigate cybersecurity risks in the National Airspace System). The report, at minimum, shall include the following:
+(1) A description of the FAA’s progress in developing, implementing, and updating such framework.
+(2) A description of prioritized research and development activities for the most needed improvements, with target dates, to safeguard the National Airspace System.
+(3) An explanation for any delays or challenges in so implementing such section.217. Rule of construction regarding collaborations
+Nothing in this Act may be construed as modifying or limiting existing collaborations, or limiting potential engagement on future collaborations, between the Administrator, stakeholders, and labor organizations, including the exclusive bargaining representative of air traffic controllers certified under section 7111 of title 5, United States Code, pertaining to Federal Aviation Administration research, development, demonstration, and testing activities.218. Turbulence research and development
+(a) In general
+Subject to the availability of appropriations for such purpose, the Administrator, in collaboration with the Administrator of the National Oceanic and Atmospheric Administration, and in consultation with the Administrator of NASA, shall carry out applied research and development to—
+(1) enhance the monitoring and understanding of severe turbulence, including clear-air turbulence; and
+(2) inform the development of measures to mitigate safety impacts on crew and the flying public that may result from severe turbulence.(b) Research and development activities
+In conducting the research and development on severe turbulence in accordance with subsection (a), the Administrator shall—
+(1) establish processes and procedures for comprehensive and systematic data collection through both instrumentation and pilot reporting, of severe turbulence, including clear-air turbulence;
+(2) establish measures for storing and managing such data collection;
+(3) support measures for monitoring and characterizing incidents of severe turbulence;
+(4) consider relevant existing research and development from other entities, including Federal departments and agencies, academia, and the private sector; and
+(5) carry out research and development—(A) to understand the impacts of climate change and other factors on the nature of turbulence, including severe turbulence and clear-air turbulence;(B) to enhance turbulence forecasts for flight planning and execution, seasonal predictions for schedule and route-planning, and long-term projections of severe turbulence, including clear-air turbulence; and(C) on other subject matters areas related to severe turbulence, as determined by the Administrator; and
+(6) support the effective transition of the results of research and development to operations, where appropriate.(c) No duplication
+The Administrator shall ensure that research and development activities under this section do not duplicate other Federal programs relating to turbulence.(d) Turbulence data
+
+(1) Commercial providers
+In conducting research and development activities under subsection (b), the Administrator may enter into agreements with commercial providers for the following:(A) The purchase of turbulence data.(B) The placement on aircraft of instruments relevant to understanding and monitoring turbulence.
+(2) Data access
+The Administrator shall make the data collected pursuant to subsection (b) widely available and accessible to the scientific research, user, and stakeholder communities, including the Administrator of the National Oceanic and Atmospheric Administration, to the greatest extent practicable and in accordance with Federal Aviation Administration data management policies.(e) Report on turbulence research
+Not later than 15 months after the date of the enactment of this Act, the Administrator, in collaboration with the Administrator of the National Oceanic and Atmospheric Administration, shall submit to the appropriate committees of Congress a report that—
+(1) details the activities conducted under this section, including how the research and development activities under subsection (b) have contributed to the goals specified in subsection (a);
+(2) assesses the current state of scientific understanding of the causes, occurrence rates, and past and projected future trends in occurrence rates of severe turbulence, including clear-air turbulence;
+(3) describes the processes and procedures for collecting, storing, and managing, data in pursuant to subsection (b);
+(4) assesses—(A) the use of commercial providers pursuant to subsection (d)(1); and(B) the need for any future Federal Government collection or procurement of data and instruments related to turbulence, including an assessment of costs;
+(5) describes how such data will be made available to the scientific research, user, and stakeholder communities; and
+(6) identifies future research and development needed to inform the development of measures to predict and mitigate the safety impacts that may result from severe turbulence, including clear-air turbulence.219. Research, development, and demonstration programs
+(a) In general
+The Administrator shall carry out research, development, testing, evaluation, and demonstration programs for low-carbon alternative aviation fuels, which may include next-generation feedstocks, biofuels, and bioderived chemicals.(b) Collaboration
+The Administrator shall collaborate with Federal agencies, industry stakeholders, research institutions, and other relevant stakeholders, to accelerate the research, development, testing, evaluation, and demonstrations programs described in subsection (a) and facilitate United States sustainability and competitiveness in aviation. 220. Limitation
+None of the funds authorized in this Act may be used to conduct research, develop, design, plan, promulgate, implement, or execute a policy, program, order, or contract of any kind with the Chinese Communist Party or any Chinese-owned entity unless such activities are specifically authorized by a law enacted after the date of enactment of this Act. 
