@@ -17,3 +17,5 @@ for file in os.listdir(text_path):
 
 documents = [Document(text=t) for t in text_list]
 
+#testing commit
+
