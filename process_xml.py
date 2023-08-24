@@ -1,16 +1,10 @@
 import os
 import csv
 from pathlib import Path
-import tkinter as tk
-from tkinter import filedialog
 from bs4 import BeautifulSoup
 from time import sleep
 from tqdm import tqdm
 import re
-
-
-#root = tk.Tk()
-#root.withdraw()
 
 '''
 input_path = filedialog.askdirectory()
