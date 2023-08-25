@@ -6,7 +6,7 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.llms import LlamaCpp, HuggingFacePipeline
 from llama_index.prompts.prompts import SimpleInputPrompt
 from llama_index.vector_stores import ChromaVectorStore
-from llama_index.vector_stores.faiss import FaissVectorStore
+from llama_index.graph_stores import Neo4jGraphStore
 from IPython.display import Markdown, display
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 from llama_index.node_parser import SimpleNodeParser
@@ -20,6 +20,13 @@ import os
 from bs4 import BeautifulSoup
 from process_xml import get_title, get_billtext, get_chamber, get_status, get_date
 from chromadb.config import Settings
+
+'''
+username = "neo4j"
+password = "retractor-knot-thermocouples"
+url = "bolt://44.211.44.239:7687"
+database = "neo4j"
+'''
 
 #query_wrapper_prompt = SimpleInputPrompt("<|USER|>{query_str}<|ASSISTANT|>")
 #callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
@@ -88,10 +95,21 @@ embed_model = LangchainEmbedding(
 service_context = ServiceContext.from_defaults(llm=llm, embed_model=embed_model, chunk_size=1024)
 set_global_service_context(service_context)
 
+'''
 chroma_client = chromadb.PersistentClient(path="/home/pebble/lai/bill_index")
 chroma_collection = chroma_client.get_or_create_collection("billtexts_full")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
-storage_context = StorageContext.from_defaults(vector_store=vector_store)
+'''
+
+graph_store = Neo4jGraphStore(
+    username=username,
+    password=password,
+    url=url,
+    database=database,
+)
+
+
+storage_context = StorageContext.from_defaults()
 
 print("loading documents...")
 
@@ -171,7 +189,7 @@ graph = ComposableGraph.from_indices(
     max_keywords_per_chunk=50,
 )
 
-graph.save_to_disk("/home/pebble/lai/graph.json")
+graph.storage_context.persist("/home/pebble/lai/bill_index")
 
 
 
