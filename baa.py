@@ -1,5 +1,5 @@
 from langchain import OpenAI
-from llama_index import Document, LangchainEmbedding, SimpleDirectoryReader, SimpleKeywordTableIndex, StorageContext, VectorStoreIndex, ServiceContext, set_global_service_context
+from llama_index import Document, LangchainEmbedding, SimpleDirectoryReader, SimpleKeywordTableIndex, StorageContext, VectorStoreIndex, GPTVectorStoreIndex, ServiceContext, set_global_service_context
 from llama_index.llms import HuggingFaceLLM, LangChainLLM
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
@@ -11,7 +11,9 @@ from IPython.display import Markdown, display
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 from llama_index.node_parser import SimpleNodeParser
 from llama_index.indices.composability import ComposableGraph
-from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer, pipeline, logging
+from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer, pipeline
+import logging
+import sys
 import chromadb
 import torch
 import os
@@ -51,6 +53,9 @@ llm = HuggingFaceLLM(
     # model_kwargs={"torch_dtype": torch.float16}
 )
 """
+
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 tokenizer = AutoTokenizer.from_pretrained("upstage/Llama-2-70b-instruct-v2")
 model = AutoModelForCausalLM.from_pretrained(
@@ -108,7 +113,8 @@ def create_index(doc_path):
                     'chamber': get_chamber(soup),
                 })
             documents.append(loaded_doc)
-    index = VectorStoreIndex.from_documents(documents, storage_context=storage_context, service_context=service_context, show_progress=True)
+    index = GPTVectorStoreIndex.from_documents(documents, storage_context=storage_context, service_context=service_context, show_progress=True)
+    index.storage_context.persist(persist_dir="/home/pebble/lai/bill_index")
     return index
 
 # Creating indexes for each session and each chamber

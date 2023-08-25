@@ -1,4 +1,4 @@
-from llama_index import Document, LLMPredictor, LangchainEmbedding, SimpleDirectoryReader, VectorStoreIndex, ServiceContext, StorageContext, load_index_from_storage, set_global_service_context
+from llama_index import Document, LLMPredictor, LangchainEmbedding, SimpleDirectoryReader, VectorStoreIndex, ServiceContext, StorageContext, load_graph_from_storage, set_global_service_context
 from llama_index.llms import HuggingFaceLLM, LangChainLLM
 from llama_index.indices.query.query_transform.base import StepDecomposeQueryTransform
 from llama_index.query_engine.multistep_query_engine import MultiStepQueryEngine
@@ -68,8 +68,8 @@ storage_context = StorageContext.from_defaults(vector_store=vector_store, persis
 
 service_context = ServiceContext.from_defaults(llm=llm, embed_model=embed_model)
 
-index = load_index_from_storage(storage_context, service_context=service_context)
+graph = load_graph_from_storage(storage_context, service_context=service_context)
 
-query_engine = index.as_query_engine(service_context=service_context)
+query_engine = graph.as_query_engine(service_context=service_context)
 
 response = query_engine.query('Find me a bill that seeks to reduce the number of school shootings')
