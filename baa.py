@@ -3,7 +3,7 @@ from llama_index import Document, LangchainEmbedding, SimpleDirectoryReader, Sim
 from llama_index.llms import HuggingFaceLLM, LangChainLLM
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-from langchain.llms import LlamaCpp
+from langchain.llms import LlamaCpp, HuggingFacePipeline
 from llama_index.prompts.prompts import SimpleInputPrompt
 from llama_index.vector_stores import ChromaVectorStore
 from llama_index.vector_stores.faiss import FaissVectorStore
@@ -11,9 +11,9 @@ from IPython.display import Markdown, display
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 from llama_index.node_parser import SimpleNodeParser
 from llama_index.indices.composability import ComposableGraph
+from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer, pipeline, logging
 import chromadb
-import openai
-import glob
+import torch
 import os
 from bs4 import BeautifulSoup
 from process_xml import get_title, get_billtext, get_chamber, get_status, get_date
@@ -52,13 +52,35 @@ llm = HuggingFaceLLM(
 )
 """
 
+tokenizer = AutoTokenizer.from_pretrained("upstage/Llama-2-70b-instruct-v2")
+model = AutoModelForCausalLM.from_pretrained(
+    "upstage/Llama-2-70b-instruct-v2",
+    device_map="auto",
+    torch_dtype=torch.float16,
+    load_in_8bit=True,
+    rope_scaling={"type": "dynamic", "factor": 2} # allows handling of longer inputs
+)
+
+pipe = pipeline(
+    "question-answering",
+    model=model,
+    tokenizer=tokenizer,
+    max_new_tokens=512,
+    temperature=0.7,
+    top_p=0.95,
+    repetition_penalty=1.15
+)
+
+llm = HuggingFacePipeline(pipeline=pipe)
+
+
 #llm = OpenAI(temperature=0, model="text-davinci-002", max_tokens=512, openai_api_key="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")
 
 embed_model = LangchainEmbedding(
   HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 )
 
-service_context = ServiceContext.from_defaults(embed_model=embed_model, chunk_size=1024)
+service_context = ServiceContext.from_defaults(llm=llm, embed_model=embed_model, chunk_size=1024)
 set_global_service_context(service_context)
 
 chroma_client = chromadb.PersistentClient(path="/home/pebble/lai/bill_index")
