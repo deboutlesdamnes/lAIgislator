@@ -131,7 +131,7 @@ def create_index(doc_path):
                     'chamber': get_chamber(soup),
                 })
             documents.append(loaded_doc)
-    index = GPTVectorStoreIndex.from_documents(documents, storage_context=storage_context, service_context=service_context, show_progress=True)
+    index = VectorStoreIndex.from_documents(documents, storage_context=storage_context, service_context=service_context, show_progress=True)
     return index
 
 # Creating indexes for each session and each chamber
