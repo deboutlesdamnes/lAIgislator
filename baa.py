@@ -115,7 +115,6 @@ def create_index(doc_path):
                 })
             documents.append(loaded_doc)
     index = GPTVectorStoreIndex.from_documents(documents, storage_context=storage_context, service_context=service_context, show_progress=True)
-    index.storage_context.persist(persist_dir="/home/pebble/lai/bill_index")
     return index
 
 # Creating indexes for each session and each chamber
