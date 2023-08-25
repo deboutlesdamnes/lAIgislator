@@ -12,6 +12,7 @@ from llama_index.vector_stores import ChromaVectorStore
 from chromadb.config import Settings
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer, pipeline, logging
+import logging
 import sys
 import chromadb
 
