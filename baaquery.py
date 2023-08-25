@@ -10,6 +10,7 @@ from langchain.llms import LlamaCpp, HuggingFacePipeline
 from langchain import PromptTemplate, LLMChain
 from llama_index.vector_stores import ChromaVectorStore
 from chromadb.config import Settings
+from llama_index.indices.composability import ComposableGraph
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer, pipeline, logging
 import logging
@@ -58,18 +59,21 @@ llm = HuggingFacePipeline(pipeline=pipe)
 ))
 '''
 
-chroma_client = chromadb.PersistentClient(path="/home/jason/lai/bill_index", settings=Settings(
+chroma_client = chromadb.PersistentClient(path="/home/pebble/lai/bill_index", settings=Settings(
     anonymized_telemetry=False
 ))
 
+'''
 chroma_collection = chroma_client.get_collection("billtexts_full")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
-storage_context = StorageContext.from_defaults(vector_store=vector_store, persist_dir="/home/jason/lai/bill_index")
+storage_context = StorageContext.from_defaults(vector_store=vector_store, persist_dir="/home/pebble/lai/bill_index")
+'''
 
 service_context = ServiceContext.from_defaults(llm=llm, embed_model=embed_model)
 
-graph = load_graph_from_storage(storage_context, service_context=service_context)
 
-query_engine = graph.as_query_engine(service_context=service_context)
+index = ComposableGraph.load_from_disk("/home/pebble/lai/graph.json")
+
+query_engine = index.as_query_engine(service_context=service_context)
 
 response = query_engine.query('Find me a bill that seeks to reduce the number of school shootings')
