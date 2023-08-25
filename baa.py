@@ -6,7 +6,6 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.llms import LlamaCpp, HuggingFacePipeline
 from llama_index.prompts.prompts import SimpleInputPrompt
 from llama_index.vector_stores import ChromaVectorStore
-from llama_index.graph_stores import ChromaGraphStore
 from llama_index.vector_stores.faiss import FaissVectorStore
 from IPython.display import Markdown, display
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
