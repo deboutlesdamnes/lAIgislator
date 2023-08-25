@@ -166,6 +166,7 @@ graph = ComposableGraph.from_indices(
     max_keywords_per_chunk=50,
 )
 
+graph.storage_context.persist(persist_dir="/home/pebble/lai/bill_index")
 
 
 
