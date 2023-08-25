@@ -189,7 +189,12 @@ graph = ComposableGraph.from_indices(
     max_keywords_per_chunk=50,
 )
 
-graph.storage_context.persist("/home/pebble/lai/bill_index")
+graph.root_index.set_index_id("bill_graph_root")
+
+# persist to storage
+graph.root_index.storage_context.persist(persist_dir="./storage")
+
+
 
 
 
