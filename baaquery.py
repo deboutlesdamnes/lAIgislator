@@ -20,7 +20,7 @@ embed_model = LangchainEmbedding(
   HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 )
 
-logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+logging.basicConfig(stream=sys.stdout, level=logging.CRITICAL)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 n_gpu_layers = 100  # Change this value based on your model and your GPU VRAM pool.
@@ -34,9 +34,6 @@ model = AutoModelForCausalLM.from_pretrained(
     load_in_8bit=True,
     rope_scaling={"type": "dynamic", "factor": 2} # allows handling of longer inputs
 )
-
-# Prevent printing spurious transformers error when using pipeline with AutoGPTQ
-logging.set_verbosity(logging.CRITICAL)
 
 pipe = pipeline(
     "question-answering",
