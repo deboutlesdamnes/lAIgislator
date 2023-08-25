@@ -99,7 +99,6 @@ set_global_service_context(service_context)
 chroma_client = chromadb.PersistentClient(path="/home/pebble/lai/bill_index")
 chroma_collection = chroma_client.get_or_create_collection("billtexts_full")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
-'''
 
 graph_store = Neo4jGraphStore(
     username=username,
@@ -107,6 +106,7 @@ graph_store = Neo4jGraphStore(
     url=url,
     database=database,
 )
+'''
 
 
 storage_context = StorageContext.from_defaults()
