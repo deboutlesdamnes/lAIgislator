@@ -61,7 +61,7 @@ llm = HuggingFaceLLM(
 )
 """
 
-logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+logging.basicConfig(stream=sys.stdout, level=logging.CRITICAL)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 tokenizer = AutoTokenizer.from_pretrained("upstage/Llama-2-70b-instruct-v2")
