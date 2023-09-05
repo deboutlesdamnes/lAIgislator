@@ -37,7 +37,7 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 pipe = pipeline(
-    "question-answering",
+    "text-generation",
     model=model,
     tokenizer=tokenizer,
     max_new_tokens=512,

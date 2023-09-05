@@ -132,7 +132,9 @@ def create_index(doc_path):
                 })
             documents.append(loaded_doc)
     index = VectorStoreIndex.from_documents(documents, storage_context=storage_context, service_context=service_context, show_progress=True)
-    return index
+    file_base = os.path.basename(doc_path)
+    file_name = os.path.splittext(file_base)[0]
+    storage_context.persist(persist_dir="/home/pebble/lai/bill_indexes/" + file_name)
 
 # Creating indexes for each session and each chamber
 
@@ -182,6 +184,8 @@ s1172_summary = """Senate bills from the second session of the 117th Congress, w
 hr1181_summary = """House Resolutions from the first session of the 118th Congress, which lasted from 2023/01/03 to 2024/01/03 and saw Republicans control the House"""
 s1181_summary = """Senate bills from the first session of the 118th Congress, which lasted from 2023/01/03 to 2024/01/03 and saw Democrats control the Senate"""
 
+'''
+
 graph = ComposableGraph.from_indices(
     SimpleKeywordTableIndex,
     [hr1131, s1131, hr1132, s1132, hr1141, s1141, hr1142, s1142, hr1151, s1151, hr1152, s1152, hr1161, s1161, hr1162, s1162, hr1171, s1171, hr1172, s1172, hr1181, s1181],
@@ -193,7 +197,7 @@ graph.root_index.set_index_id("bill_graph_root")
 
 # persist to storage
 graph.root_index.storage_context.persist(persist_dir="./storage")
-
+'''
 
 
 
