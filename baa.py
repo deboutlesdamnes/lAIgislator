@@ -64,6 +64,8 @@ llm = HuggingFaceLLM(
 logging.basicConfig(stream=sys.stdout, level=logging.CRITICAL)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
+'''
+
 tokenizer = AutoTokenizer.from_pretrained("upstage/Llama-2-70b-instruct-v2")
 model = AutoModelForCausalLM.from_pretrained(
     "upstage/Llama-2-70b-instruct-v2",
@@ -75,6 +77,25 @@ model = AutoModelForCausalLM.from_pretrained(
 
 pipe = pipeline(
     "question-answering",
+    model=model,
+    tokenizer=tokenizer,
+    max_new_tokens=512,
+    temperature=0.7,
+    top_p=0.95,
+    repetition_penalty=1.15
+)
+'''
+
+model_name_or_path = "TheBloke/Llama-2-70B-GPTQ"
+model = AutoModelForCausalLM.from_pretrained(model_name_or_path,
+                                             torch_dtype=torch.float16,
+                                             device_map="auto",
+                                             revision="main")
+
+tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=True)
+
+pipe = pipeline(
+    "text-generation",
     model=model,
     tokenizer=tokenizer,
     max_new_tokens=512,
