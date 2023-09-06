@@ -129,9 +129,6 @@ graph_store = Neo4jGraphStore(
 )
 '''
 
-
-storage_context = StorageContext.from_defaults()
-
 print("loading documents...")
 
 def create_index(doc_path):
@@ -157,6 +154,7 @@ def create_index(doc_path):
                     'chamber': get_chamber(soup),
                 })
             documents.append(loaded_doc)
+    storage_context = StorageContext.from_defaults()
     index = VectorStoreIndex.from_documents(documents, storage_context=storage_context, service_context=service_context, show_progress=True)
     index.storage_context.persist(persist_dir="/home/pebble/lai/bill_indexes/" + file_name)
 
