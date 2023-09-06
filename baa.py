@@ -154,7 +154,7 @@ def create_index(doc_path):
             documents.append(loaded_doc)
     index = VectorStoreIndex.from_documents(documents, storage_context=storage_context, service_context=service_context, show_progress=True)
     file_base = os.path.basename(doc_path)
-    file_name = os.path.splittext(file_base)[0]
+    file_name = os.path.splitext(file_base)[0]
     storage_context.persist(persist_dir="/home/pebble/lai/bill_indexes/" + file_name)
 
 # Creating indexes for each session and each chamber
