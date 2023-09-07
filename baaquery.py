@@ -1,4 +1,4 @@
-from llama_index import Document, LLMPredictor, LangchainEmbedding, SimpleDirectoryReader, VectorStoreIndex, ServiceContext, StorageContext, SimpleKeywordTableIndex, load_index_from_storage
+from llama_index import Document, LLMPredictor, LangchainEmbedding, SimpleDirectoryReader, VectorStoreIndex, ServiceContext, StorageContext, SimpleKeywordTableIndex, load_index_from_storage, set_global_service_context
 from llama_index.indices.query.query_transform.base import StepDecomposeQueryTransform
 from llama_index.query_engine.multistep_query_engine import MultiStepQueryEngine
 from llama_index.prompts.prompts import SimpleInputPrompt
