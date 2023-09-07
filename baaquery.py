@@ -1,20 +1,11 @@
-from llama_index import Document, LLMPredictor, LangchainEmbedding, SimpleDirectoryReader, VectorStoreIndex, ServiceContext, StorageContext, SimpleKeywordTableIndex, load_index_from_storage, set_global_service_context
-from llama_index.indices.query.query_transform.base import StepDecomposeQueryTransform
-from llama_index.query_engine.multistep_query_engine import MultiStepQueryEngine
-from llama_index.prompts.prompts import SimpleInputPrompt
-from langchain.callbacks.manager import CallbackManager
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from llama_index import LangchainEmbedding, ServiceContext, StorageContext, SimpleKeywordTableIndex, load_index_from_storage, set_global_service_context
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
-from langchain.llms import LlamaCpp, HuggingFacePipeline
-from langchain import PromptTemplate, LLMChain
-from llama_index.vector_stores import ChromaVectorStore
-from chromadb.config import Settings
+from langchain.llms import HuggingFacePipeline
 from llama_index.indices.composability import ComposableGraph
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer, pipeline, logging
+from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline, logging
 import logging
 import sys
-import chromadb
 
 
 embed_model = LangchainEmbedding(
@@ -125,6 +116,8 @@ graph = ComposableGraph.from_indices(
     max_keywords_per_chunk=50,
 )
 
+graph.root_index.set_index_id("my_id")
+graph.root_index.storage_context.persist(persist_dir="/home/pebble/lai/bill_graph")
 '''
 chroma_collection = chroma_client.get_collection("billtexts_full")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
