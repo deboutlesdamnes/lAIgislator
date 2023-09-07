@@ -21,7 +21,7 @@ embed_model = LangchainEmbedding(
   HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 )
 
-logging.basicConfig(stream=sys.stdout, level=logging.CRITICAL)
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 model_name_or_path = "TheBloke/Llama-2-70B-GPTQ"
