@@ -41,7 +41,10 @@ pipe = pipeline(
     repetition_penalty=1.15
 )
 
+
 llm = HuggingFacePipeline(pipeline=pipe)
+
+service_context = ServiceContext.from_defaults(llm=llm, embed_model=embed_model, chunk_size=1024)
 
 con_hr1131 = StorageContext.from_defaults(persist_dir = "/home/pebble/lai/bill_indexes/hr1131")
 con_hr1132 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/bill_indexes/hr1132')
@@ -125,8 +128,6 @@ chroma_collection = chroma_client.get_collection("billtexts_full")
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
 storage_context = StorageContext.from_defaults(vector_store=vector_store, persist_dir="/home/pebble/lai/bill_index")
 '''
-
-service_context = ServiceContext.from_defaults(llm=llm, embed_model=embed_model)
 
 query_engine = graph.as_query_engine(service_context=service_context)
 
