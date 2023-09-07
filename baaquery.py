@@ -1,5 +1,4 @@
-from llama_index import Document, LLMPredictor, LangchainEmbedding, SimpleDirectoryReader, VectorStoreIndex, ServiceContext, StorageContext, load_graph_from_storage, set_global_service_context
-from llama_index.llms import HuggingFaceLLM, LangChainLLM
+from llama_index import Document, LLMPredictor, LangchainEmbedding, SimpleDirectoryReader, VectorStoreIndex, ServiceContext, StorageContext, SimpleKeywordTableIndex, load_index_from_storage
 from llama_index.indices.query.query_transform.base import StepDecomposeQueryTransform
 from llama_index.query_engine.multistep_query_engine import MultiStepQueryEngine
 from llama_index.prompts.prompts import SimpleInputPrompt
@@ -24,17 +23,13 @@ embed_model = LangchainEmbedding(
 logging.basicConfig(stream=sys.stdout, level=logging.CRITICAL)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
-n_gpu_layers = 100  # Change this value based on your model and your GPU VRAM pool.
-n_batch = 256
+model_name_or_path = "TheBloke/Llama-2-70B-GPTQ"
+model = AutoModelForCausalLM.from_pretrained(model_name_or_path,
+                                             torch_dtype=torch.float16,
+                                             device_map="auto",
+                                             revision="main")
 
-tokenizer = AutoTokenizer.from_pretrained("upstage/Llama-2-70b-instruct-v2")
-model = AutoModelForCausalLM.from_pretrained(
-    "upstage/Llama-2-70b-instruct-v2",
-    device_map="auto",
-    torch_dtype=torch.float16,
-    load_in_8bit=True,
-    rope_scaling={"type": "dynamic", "factor": 2} # allows handling of longer inputs
-)
+tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=True)
 
 pipe = pipeline(
     "text-generation",
@@ -48,20 +43,82 @@ pipe = pipeline(
 
 llm = HuggingFacePipeline(pipeline=pipe)
 
+con_hr1131 = StorageContext.from_defaults(persist_dir = "/home/pebble/lai/hr1131")
+con_hr1132 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1132')
+con_s1131 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1131')
+con_s1132 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1132')
+con_hr1141 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1141')
+con_hr1142 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1142')
+con_s1141 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1141')
+con_s1142 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1142')
+con_hr1151 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1151')
+con_hr1152 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1152')
+con_s1151 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1151')
+con_s1152 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1152')
+con_hr1161 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1161')
+con_hr1162 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1162')
+con_s1161 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1161')
+con_s1162 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1162')
+con_hr1171 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1171')
+con_hr1172 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1172')
+con_s1171 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1171')
+con_s1172 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1172')
+con_hr1181 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/hr1181')
+con_s1181 = StorageContext.from_defaults(persist_dir = '/home/pebble/lai/s1181')
 
-'''llm = LangChainLLM(llm=LlamaCpp(
-    model_path="/home/jason/llama.cpp/models/llama-2-13b-chat.ggmlv3.q4_0.bin",
-    input={"temperature": 0.75, "max_length": 512, "top_p": 1},
-    n_gpu_layers=n_gpu_layers,
-    n_batch=n_batch,
-    verbose=True,
-    n_ctx=4096
-))
-'''
+hr1131 = load_index_from_storage(con_hr1131) 
+hr1132 = load_index_from_storage(con_hr1132) 
+hr1141 = load_index_from_storage(con_hr1141) 
+hr1142 = load_index_from_storage(con_hr1142) 
+hr1151 = load_index_from_storage(con_hr1151) 
+hr1152 = load_index_from_storage(con_hr1152) 
+hr1161 = load_index_from_storage(con_hr1161) 
+hr1162 = load_index_from_storage(con_hr1162) 
+hr1171 = load_index_from_storage(con_hr1171) 
+hr1172 = load_index_from_storage(con_hr1172) 
+hr1181 = load_index_from_storage(con_hr1181) 
+s1131 = load_index_from_storage(con_s1131) 
+s1132 = load_index_from_storage(con_s1132) 
+s1141 = load_index_from_storage(con_s1141) 
+s1142 = load_index_from_storage(con_s1142) 
+s1151 = load_index_from_storage(con_s1151) 
+s1152 = load_index_from_storage(con_s1152) 
+s1161 = load_index_from_storage(con_s1161) 
+s1162 = load_index_from_storage(con_s1162) 
+s1171 = load_index_from_storage(con_s1171) 
+s1172 = load_index_from_storage(con_s1172) 
+s1181 = load_index_from_storage(con_s1181) 
 
-chroma_client = chromadb.PersistentClient(path="/home/pebble/lai/bill_index", settings=Settings(
-    anonymized_telemetry=False
-))
+
+hr1131_summary = """House Resolutions from the first session of the 113th Congress, which lasted from 2013/01/03 to 2014/01/03 and saw Republicans control the House"""
+hr1132_summary = """House Resolutions from the second session of the 113th Congress, which lasted from 2014/01/03 to 2015/01/03 and saw Republicans control the House"""
+s1131_summary = """Senate bills from the first session of the 113th Congress, which lasted from 2013/01/03 to 2014/01/03 and saw Democrats control the Senate"""
+s1132_summary = """Senate bills from the second session of the 113th Congress, which lasted from 2014/01/03 to 2015/01/03 and saw Democrats control the Senate"""
+hr1141_summary = """House Resolutions from the first session of the 114th Congress, which lasted from 2015/01/03 to 2016/01/03 and saw Republicans control the House"""
+hr1142_summary = """House Resolutions from the second session of the 114th Congress, which lasted from 2016/01/03 to 2017/01/03 and saw Republicans control the House"""
+s1141_summary = """Senate bills from the first session of the 114th Congress, which lasted from 2015/01/03 to 2016/01/03 and saw Republicans control the Senate"""
+s1142_summary = """Senate bills from the second session of the 114th Congress, which lasted from 2016/01/03 to 2017/01/03 and saw Republicans control the Senate"""
+hr1151_summary = """House Resolutions from the first session of the 115th Congress, which lasted from 2017/01/03 to 2018/01/03 and saw Republicans control the House"""
+hr1152_summary = """House Resolutions from the second session of the 115th Congress, which lasted from 2018/01/03 to 2019/01/03 and saw Republicans control the House"""
+s1151_summary = """Senate bills from the first session of the 115th Congress, which lasted from 2017/01/03 to 2018/01/03 and saw Republicans control the Senate"""
+s1152_summary = """Senate bills from the second session of the 115th Congress, which lasted from 2018/01/03 to 2019/01/03 and saw Republicans control the Senate"""
+hr1161_summary = """House Resolutions from the first session of the 116th Congress, which lasted from 2019/01/03 to 2020/01/03 and saw Democrats control the House"""
+hr1162_summary = """House Resolutions from the second session of the 116th Congress, which lasted from 2020/01/03 to 2021/01/03 and saw Democrats control the House"""
+s1161_summary = """Senate bills from the first session of the 116th Congress, which lasted from 2019/01/03 to 2020/01/03 and saw Republicans control the Senate"""
+s1162_summary = """Senate bills from the second session of the 116th Congress, which lasted from 2020/01/03 to 2021/01/03 and saw Republicans control the Senate"""
+hr1171_summary = """House Resolutions from the first session of the 117th Congress, which lasted from 2021/01/03 to 2022/01/03 and saw Democrats control the House"""
+hr1172_summary = """House Resolutions from the second session of the 117th Congress, which lasted from 2022/01/03 to 2023/01/03 and saw Democrats control the House"""
+s1171_summary = """Senate bills from the first session of the 117th Congress, which lasted from 2021/01/03 to 2022/01/03 and saw Republicans control the Senate until 2021/01/20 and Democrats control the Senate for the rest of the session"""
+s1172_summary = """Senate bills from the second session of the 117th Congress, which lasted from 2022/01/03 to 2023/01/03 and saw Republicans control the Senate"""
+hr1181_summary = """House Resolutions from the first session of the 118th Congress, which lasted from 2023/01/03 to 2024/01/03 and saw Republicans control the House"""
+s1181_summary = """Senate bills from the first session of the 118th Congress, which lasted from 2023/01/03 to 2024/01/03 and saw Democrats control the Senate"""
+
+graph = ComposableGraph.from_indices(
+    SimpleKeywordTableIndex,
+    [hr1131, s1131, hr1132, s1132, hr1141, s1141, hr1142, s1142, hr1151, s1151, hr1152, s1152, hr1161, s1161, hr1162, s1162, hr1171, s1171, hr1172, s1172, hr1181, s1181],
+    index_summaries=[hr1131_summary, s1131_summary, hr1132_summary, s1132_summary, hr1141_summary, s1141_summary, hr1142_summary, s1142_summary, hr1151_summary, s1151_summary, hr1152_summary, s1152_summary, hr1161_summary, s1161_summary, hr1162_summary, s1162_summary, hr1171_summary, s1171_summary, hr1172_summary, s1172_summary, hr1181_summary, s1181_summary],
+    max_keywords_per_chunk=50,
+)
 
 '''
 chroma_collection = chroma_client.get_collection("billtexts_full")
@@ -71,9 +128,6 @@ storage_context = StorageContext.from_defaults(vector_store=vector_store, persis
 
 service_context = ServiceContext.from_defaults(llm=llm, embed_model=embed_model)
 
-
-index = ComposableGraph.load_from_disk("/home/pebble/lai/graph.json")
-
-query_engine = index.as_query_engine(service_context=service_context)
+query_engine = graph.as_query_engine(service_context=service_context)
 
 response = query_engine.query('Find me a bill that seeks to reduce the number of school shootings')

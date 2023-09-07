@@ -1,5 +1,5 @@
 from langchain import OpenAI
-from llama_index import Document, LangchainEmbedding, SimpleDirectoryReader, SimpleKeywordTableIndex, StorageContext, VectorStoreIndex, GPTVectorStoreIndex, ServiceContext, set_global_service_context
+from llama_index import Document, LangchainEmbedding, SimpleDirectoryReader, SimpleKeywordTableIndex, StorageContext, VectorStoreIndex, GPTVectorStoreIndex, ServiceContext, set_global_service_context, load_index_from_storage
 from llama_index.llms import HuggingFaceLLM, LangChainLLM
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
