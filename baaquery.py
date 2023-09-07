@@ -15,28 +15,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer, pipe
 import logging
 import sys
 import chromadb
-from langchain import OpenAI
-from llama_index import Document, LangchainEmbedding, SimpleDirectoryReader, SimpleKeywordTableIndex, StorageContext, VectorStoreIndex, GPTVectorStoreIndex, ServiceContext, set_global_service_context, load_index_from_storage
-from llama_index.llms import HuggingFaceLLM, LangChainLLM
-from langchain.callbacks.manager import CallbackManager
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-from langchain.llms import LlamaCpp, HuggingFacePipeline
-from llama_index.prompts.prompts import SimpleInputPrompt
-from llama_index.vector_stores import ChromaVectorStore
-from llama_index.graph_stores import Neo4jGraphStore
-from IPython.display import Markdown, display
-from langchain.embeddings.huggingface import HuggingFaceEmbeddings
-from llama_index.node_parser import SimpleNodeParser
-from llama_index.indices.composability import ComposableGraph
-from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer, pipeline
-import logging
-import sys
-import chromadb
-import torch
-import os
-from bs4 import BeautifulSoup
-from process_xml import get_title, get_billtext, get_chamber, get_status, get_date
-from chromadb.config import Settings
+
 
 embed_model = LangchainEmbedding(
   HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
